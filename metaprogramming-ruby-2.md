@@ -1,6 +1,6 @@
 # Metaprogramming Ruby 2 - synopsis
 by Maddie Campos(mailto:maddie@blubeta.com)
-September 2016
+September/October 2016
 
 ## Concepts
 
