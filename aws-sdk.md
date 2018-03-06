@@ -17,3 +17,13 @@ curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
 sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 ```
+
+# AWS ECS ( deploying )
+
+* eval $(aws ecr --profile blubeta get-login --region us-east-1 | sed 's|https://||')
+* docker build -t [name] [path] (i.e. docker build tech-crawl .)
+* docker tag [name]:[tag:latest] [ECS URL]:[tag:latest]
+* docker push [ECS URL]:[tag:latest]
+
+
+# Docker
