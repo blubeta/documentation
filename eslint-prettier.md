@@ -24,6 +24,6 @@ The main benefit of ESLint is that every single rule is a plugin and you can add
 
 ### TL;DR
 
-1.  ESLint does static analysis on our JavaScript and JSX and ensures it adheres to specific guidelines.
+1.  ESLint does static analysis on our JavaScript and JSX and ensures it adheres to specific rules and guidelines to limit errors and problematic patterns.
 2.  Prettier allows us to set strict guidlines for how we want our code to be formatted, and will format our code on specified actions.
 3.  [Read this](https://prettier.io/docs/en/comparison.html) to learn why using these tools in tandem is :fire:
