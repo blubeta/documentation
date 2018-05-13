@@ -13,3 +13,5 @@
 ## React Native
 
 * [React Native when it Start](https://levelup.gitconnected.com/wait-what-happens-when-my-react-native-application-starts-an-in-depth-look-inside-react-native-5f306ef3250f)
+
+* [Tips for styling in React Native](https://www.okgrow.com/posts/react-native-styling-tips)
