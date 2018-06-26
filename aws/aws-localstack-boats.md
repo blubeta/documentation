@@ -7,8 +7,9 @@
 -Install awslocal by running $ pip install awscli-local. This allows you to run AWS CLI commands without having to set an endpoint URL in every command.
 ## Start Localstack
 1. ```$ LAMBDA_EXECUTOR=docker localstack start --docker```
-This starts the local stack service in a Docker container. The environment variable is required to run Lambda functions written in Node.  
-# Add a test email to an s3 bucket 1.  Get a MIME formatted email and put it into a file named “testemail” (no file extension). I did this by sending an email to a Route 53 domain I set up to receive emails and deposit them in an S3 bucket in SES, then grabbing the email manually from the S3 bucket and renaming it. There are probably other ways to do this. 
+This starts the local stack service in a Docker container. The environment variable is required to run Lambda functions written in Node.
+# Add a test email to an s3 bucket
+1.  Get a MIME formatted email and put it into a file named “testemail” (no file extension). I did this by sending an email to a Route 53 domain I set up to receive emails and deposit them in an S3 bucket in SES, then grabbing the email manually from the S3 bucket and renaming it. There are probably other ways to do this.
 2. ``` $ awslocal s3 mb s3://emails ```
 This is the AWS CLI command to create an S3 bucket. “emails” is the name of the bucket.
 
