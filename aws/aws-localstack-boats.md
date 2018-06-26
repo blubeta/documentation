@@ -1,14 +1,16 @@
 # Running Helm using Localstack
 ## Prerequisites
--Install Docker.
--Install Ngrok - I downloaded the main Ngrok program from the website and put it in the ~ directory.
--Have the AWS CLI installed and credentials created, see AWS docs.
--Install localstack with pip install localstack. You might have an issue with your default Python path. If you do, run echo $PATH to see if you have a Python path, and if you do, add it to the bottom of your path file with a text editor.
--Install awslocal by running $ pip install awscli-local. This allows you to run AWS CLI commands without having to set an endpoint URL in every command.
+1. Install Docker.
+2. Install Ngrok. I downloaded the main Ngrok program from the website and put it in the ~ directory.
+3. Have the AWS CLI installed and credentials created, see AWS docs.
+4. Install localstack with ```pip install localstack```
+You might have an issue with your default Python path. If you do, run echo $PATH to see if you have a Python path, and if you do, add it to the bottom of your path file with a text editor.
+5. Install awslocal by running ```$ pip install awscli-local```
+This allows you to run AWS CLI commands without having to set an endpoint URL in every command.
 ## Start Localstack
 1. ```$ LAMBDA_EXECUTOR=docker localstack start --docker```
 This starts the local stack service in a Docker container. The environment variable is required to run Lambda functions written in Node.
-# Add a test email to an s3 bucket
+## Add a test email to an s3 bucket
 1.  Get a MIME formatted email and put it into a file named “testemail” (no file extension). I did this by sending an email to a Route 53 domain I set up to receive emails and deposit them in an S3 bucket in SES, then grabbing the email manually from the S3 bucket and renaming it. There are probably other ways to do this.
 2. ``` $ awslocal s3 mb s3://emails ```
 This is the AWS CLI command to create an S3 bucket. “emails” is the name of the bucket.
@@ -23,7 +25,7 @@ Creates a tunnel to localhost on that port number so that the Lambda function ca
 ## Create the lambda function to receive email.
 1. Add the Ngrok URL to the lambda function’s post request configuration.
 
-2. Navigate to folder containing the lambda function, then run $ zip index.zip . -r
+2. Navigate to folder containing the lambda function, then run ```$ zip index.zip . -r```
 
 3. ```$ awslocal lambda create-function --function-name=index --runtime=nodejs6.10 --role=r1 --handler=index.handler --zip-file fileb://index.zip```
 
