@@ -3,14 +3,14 @@
 ### Tips:
 
 - Always use camelCase and not snake_case, GTM has a hard time parsing snake_case for some reason
-- Make sure in Scheme OS_ACTIVITY_MODE is de-selected, if it exists, kill it with fire...
-
+- Make sure in Scheme OS_ACTIVITY_MODE is de-selected or destroyed (probably destroyed is better)
+- For most Events Tracking to end up on GA, they need a Event Action, Event Label, and Event Category
+- Clean your build everytime you update a container, and maybe even delete your emulator settings - otherwise it will be cached and won't look to update the container
 
  
-
 ## Setting Up
 
-### Container for use with Firebase Analytics
+### General Container Set Up with Firebase
 
 - Container Tag Type: Universal Analytics
 - Track Type: Event
@@ -22,20 +22,25 @@
 - Google Analytics - Don't set
 - [x] Enable overriding settings in this tag
 - Tracking ID - Set to a variable constant that containt Google Analytics Tracking ID
+	- Make sure this a CONSTANT and not another type of variable
 - Triggering
 	- Create a Custom Event 
 		- Trigger Fires on Some Events 
 		- Event Name contains `{ eventName from JS }` - good default to use is `generalEvent` for most events
 
-### iOS
+
+### Adding Containers to Native Builds
+
+#### iOS
 
 - Adding the Container
 	1. Download GTM Container from the latest version of GTM Container for iOS, and place in the top level iOS folder. 
 	2. Open xCode.
 	3. In the Menu > File > Add files to `{ project }`
-	4. Add file to the boat-trader xcworkspace directory (make sure create folder references is checked in options)
+	4. Add file to the boat-trader xcworkspace directory (the second-to-top level folder) (make sure create folder references is checked in options)
 	5. Clean Your Build and Erase Your Emulator to get immediate access to new GTM Container
 
-### Android 
+#### Android 
 
 - 
+
