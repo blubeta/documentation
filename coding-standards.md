@@ -14,3 +14,12 @@ TBD
 
 ## RUBY
 TBD
+
+## GIT
+
+- Commits should be written in active tense.
+  ex: Updates Readme.md
+
+- History should be linear which can be maintained by merging upstream and rebasing downstream
+  ex: rebase Master onto Develop and merge Develop into Master (in that order...)
+
