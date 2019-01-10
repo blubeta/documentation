@@ -8,13 +8,13 @@ This is a live list of coding standards that we use on an every day basis.  Ever
 - DO NOT USE `px` (responsiveness across the board) `em,vm,vh`
 
 ## JS
-TBD
+- [JS Standard style guide](https://standardjs.com/rules.html)
 
 ## PHP
 TBD
 
 ## RUBY
-TBD
+- [RuboCop ruby style guide](https://github.com/rubocop-hq/ruby-style-guide)
 
 ## GIT
 
