@@ -8,6 +8,9 @@ Conduit uses the git rebase flow for their downstream branches, and uses Pull Re
 - Each commit on that branch should follow a similar naming scheme: `<Jira ticket #> <commit description>`
 
 ### Pull Requests
+- IMPORTANT: Before every PR, make sure to 
+  - Run `npm test`. All tests must pass, if they don't fix them.
+  - Run `node apidoc.js` in `conduit/node/src` to update the docs, make sure it works.
 - Create Pull Requests on Bitbucket, always into develop.
 - Use the naming scheme: `<module>: <description>`. E.g. `api-contractor-assist: Updates User Info API to contain Prize information and Adds Prize Endpoint`
 - I usually leave the Description as whatever the commits were, never a problem.
