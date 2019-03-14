@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "96245fd1-9708-4fb3-aa24-4289403cc2fb",
+		"name": "API-Refrigerant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API-Refrigerant",
+			"item": []
+		},
+		{
+			"name": "GetRefrigerantEntries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/refrigerant",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"refrigerant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// Clear out old token",
+							"postman.clearEnvironmentVariable(\"authToken\");",
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Access Token Returned\"] = responseBody.has(\"token\");",
+							"",
+							"// Now set auth token",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"auth-token\", jsonData.data.token);",
+							"",
+							"postman.setNextRequest(\"Get all branches\");",
+							"postman.setNextRequest(\"CE Warranty Search\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-conduit-bu",
+						"value": "BK"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/authenticate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create/Update Refrigerant Entries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "company_id",
+							"value": " ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "service_date",
+							"value": "2018-08-30T15:42:28.885Z",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": " ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "serial_num",
+							"value": " ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "model_num",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "model_type",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "serial_plate_img_name",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "customer_name",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "address",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "latitude",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "longitude",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "refrigerant",
+							"value": "R410B ",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "service_reason",
+							"value": "SRV ",
+							"type": "text"
+						},
+						{
+							"key": "inspection_method",
+							"value": "ELE ",
+							"type": "text"
+						},
+						{
+							"key": "pressure",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "micron",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "factory_start_weight",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "factory_end_weight",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "factory_used",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "field_start_weight",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "field_end_weight",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "field_used",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "refrigerant_calculation",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "notes",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "created_date",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "updated_date",
+							"value": "  ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "updated_user_id",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/refrigerant",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"refrigerant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

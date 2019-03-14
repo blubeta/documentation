@@ -1,0 +1,782 @@
+{
+	"info": {
+		"_postman_id": "97e02ba9-9952-42fa-94a2-177c4a35d4a0",
+		"name": "API-Contractor-Assist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Prizes",
+			"item": [
+				{
+					"name": "Get Prize Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-conduit-bu",
+								"value": "bk"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/apps/contractor_assist/v1/prize?include_all_prizes=true",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"apps",
+								"contractor_assist",
+								"v1",
+								"prize"
+							],
+							"query": [
+								{
+									"key": "include_all_prizes",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Submit user info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "BK"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "app_id",
+									"value": "6fcef504a45a85c1",
+									"type": "text"
+								},
+								{
+									"key": "app_language",
+									"value": "EN",
+									"type": "text"
+								},
+								{
+									"key": "app_version",
+									"value": "8.1",
+									"type": "text"
+								},
+								{
+									"key": "device_type",
+									"value": "Samsung SM-G928T",
+									"type": "text"
+								},
+								{
+									"key": "device_os",
+									"value": "android",
+									"type": "text"
+								},
+								{
+									"key": "gps_enabled",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "push_enabled",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "btest",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "25.7617",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "80.1918",
+									"type": "text"
+								},
+								{
+									"key": "post_code",
+									"value": "33133",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/apps/contractor_assist/v1/userinfo",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"apps",
+								"contractor_assist",
+								"v1",
+								"userinfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Preferred Branch",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-conduit-bu",
+								"value": "CE"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "branch_id",
+									"value": "2524",
+									"type": "text"
+								},
+								{
+									"key": "app_id",
+									"value": "19121F4F-02E1-442D-A639-E043152119A6",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "186310",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/apps/contractor_assist/v1/userinfo/preferred_branch",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"apps",
+								"contractor_assist",
+								"v1",
+								"userinfo",
+								"preferred_branch"
+							]
+						},
+						"description": "{{URL}}/apps/contractor_assist/v1/userinfo/preferred_branch"
+					},
+					"response": []
+				},
+				{
+					"name": "Increment launch count",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-conduit-bu",
+								"value": "EC"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "app_id",
+									"value": "80d1e0b878f617d1",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/apps/contractor_assist/v1/userinfo/187767/launch-count/increment",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"apps",
+								"contractor_assist",
+								"v1",
+								"userinfo",
+								"187767",
+								"launch-count",
+								"increment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user info",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "BK"
+							},
+							{
+								"key": "x-contractor-assist-BU",
+								"value": "FC"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "app_id",
+									"value": "6fcef504a45a85c1",
+									"type": "text"
+								},
+								{
+									"key": "app_language",
+									"value": "EN",
+									"type": "text"
+								},
+								{
+									"key": "app_version",
+									"value": "8.1",
+									"type": "text"
+								},
+								{
+									"key": "device_type",
+									"value": "Samsung SM-G928T",
+									"type": "text"
+								},
+								{
+									"key": "device_os",
+									"value": "android",
+									"type": "text"
+								},
+								{
+									"key": "gps_enabled",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "push_enabled",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "btest",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "25.7617",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "longitude",
+									"value": "80.1918",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "post_code",
+									"value": "33133",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "user_id",
+									"value": "187767",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "brandon",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "thaler",
+									"type": "text"
+								},
+								{
+									"key": "company_name",
+									"value": "blubeta",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "bt@blubeta.com",
+									"type": "text"
+								},
+								{
+									"key": "years_experience",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "company_trucks",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "purchase_role",
+									"value": "asf",
+									"type": "text"
+								},
+								{
+									"key": "job_role",
+									"value": "b",
+									"type": "text"
+								},
+								{
+									"key": "game_opt_in",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/apps/contractor_assist/v1/userinfo",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"apps",
+								"contractor_assist",
+								"v1",
+								"userinfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Logout",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"// test that we got a valid response",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "ec"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/apps/contractor_assist/v1/user/hwilliams@watsco.com/logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"apps",
+								"contractor_assist",
+								"v1",
+								"user",
+								"hwilliams@watsco.com",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put GetUserInfo - CE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"// test that we got a valid response",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Looking for heiler_num\"] = responseBody.has(\"1428408500474\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "EC"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"app_id\": \"6fcef504a45a85c1\",\n  \"user_id\": \"185634\",\n  \"app_language\": \"EN\",\n  \"app_version\": \"8.1\",\n  \"device_type\": \"Samsung SM-G928T\",\n  \"device_os\": \"android\",\n  \"gps_enabled\": 1,\n  \"latitude\": \"25.7617\",\n  \"longitude\": \"80.1918\",\n  \"post_code\": \"33133\",\n  \"push_enabled\": 1,\n  \"username\": \"us-east-1:b00354ee-b852-4d34-a2d3-4633449f21e0\",\n  \"first_name\": \"brandon\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/apps/contractor_assist/v1/userinfo/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"apps",
+								"contractor_assist",
+								"v1",
+								"userinfo",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get GetUserInfo - CE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"// test that we got a valid response",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Looking for heiler_num\"] = responseBody.has(\"1428408500474\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "EC"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/apps/contractor_assist/v1/userinfo/185634?app_id=6fcef504a45a85c1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"apps",
+								"contractor_assist",
+								"v1",
+								"userinfo",
+								"185634"
+							],
+							"query": [
+								{
+									"key": "app_id",
+									"value": "6fcef504a45a85c1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Api to storage and retrieve data from Users"
+		},
+		{
+			"name": "Lookup",
+			"item": [
+				{
+					"name": "Get AHRI",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-conduit-bu",
+								"value": "gm"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/apps/contractor_assist/v1/profile?service_provider=AHRI",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"apps",
+								"contractor_assist",
+								"v1",
+								"profile"
+							],
+							"query": [
+								{
+									"key": "service_provider",
+									"value": "AHRI"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-conduit-bu",
+								"value": "bk"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/apps/contractor_assist/v1/profile?service_provider=DG",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"apps",
+								"contractor_assist",
+								"v1",
+								"profile"
+							],
+							"query": [
+								{
+									"key": "service_provider",
+									"value": "DG"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Warranty",
+			"item": [
+				{
+					"name": "Post Warranty Claim",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"// test that we got a valid response",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"is_name_masked\"] = responseBody.has(\"true\");",
+									"tests[\"serial_num\"] = responseBody.has(\"PPF100301100\");",
+									"tests[\"contact_num\"] = responseBody.has(\"572603\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "BK"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Service-Bench-Credentials",
+								"value": "pONx7W/1/hjHMrYI2z5UA9niMRaIBYd2pFLnZWF8W3x35+ef/z4w+fcM9bU5Dm/32A7hMhR/xUVooyXjt6/bCRKz5f0Vl+FkD2zB1+ZzKl0Xz6GHwqD72X5jPAqUCGEX"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"claim\": {\n\t\t\"customer_details\": {\n\t\t\t\"account_num\": \"493878876\",\n\t\t\t\"account_username\": \"\",\n\t\t\t\"address\": {\n\t\t\t\t\"address_1\": \"208 CAMILLE STREET\",\n\t\t\t\t\"address_3\": \"\",\n\t\t\t\t\"city\": \"EASLEY\",\n\t\t\t\t\"country\": \"US\",\n\t\t\t\t\"region\": \"SC\",\n\t\t\t\t\"postcode\": \"29642\"\n\t\t\t},\n\t\t\t\"first_name\": \"FRANK\",\n\t\t\t\"is_original_equipment_owner\": false,\n\t\t\t\"last_name\": \"CHAPPLE\",\n\t\t\t\"phone_num\": \"\"\n\t\t},\n\t\t\"general_details\": {\n\t\t\t\"agreement_no\": \"\",\n\t\t\t\"comment\": \"\",\n\t\t\t\"customer_complaint\": \"\",\n\t\t\t\"hold_b\": false,\n\t\t\t\"reference_num\": \"APP2091204263668\",\n\t\t\t\"warranty_type\": \"standard\"\n\t\t},\n\t\t\"idPrimaryKey\": 1,\n\t\t\"parts\": [{\n\t\t\t\"failed_item_mpn\": \"\",\n\t\t\t\"failed_part_quantity\": 1,\n\t\t\t\"failed_part_serial_num\": \"\",\n\t\t\t\"is_causal_part\": true,\n\t\t\t\"replacement_part_invoice_num\": \"\",\n\t\t\t\"replacement_item_mpn\": \"\",\n\t\t\t\"replacement_part_quantity\": 1,\n\t\t\t\"replacement_part_serial_num\": \"\"\n\t\t}],\n\t\t\"service_details\": {\n\t\t\t\"paid_with_credit_card\": false,\n\t\t\t\"repair_category\": \"no_doa_labor\",\n\t\t\t\"service_complete_date\": \"2018-09-12T00:00:00.000Z\",\n\t\t\t\"service_request_date\": \"2018-09-12T00:00:00.000Z\"\n\t\t},\n\t\t\"unit_details\": {\n\t\t\t\"competitive_equipment\": false,\n\t\t\t\"install_date\": \"2008-10-08T00:00:00.000Z\",\n\t\t\t\"model_num\": \"PDX442080K00A\",\n\t\t\t\"serial_num\": \"G081541143\"\n\t\t}\n\t},\n\t\"manufacturer_id\": [\"carrier\"],\n\t\"save\": false,\n\t\"username\": \"wsentitlement\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/warranty/claim",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"warranty",
+								"claim"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Defect Codes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"// test that we got a valid response",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"is_name_masked\"] = responseBody.has(\"true\");",
+									"tests[\"serial_num\"] = responseBody.has(\"PPF100301100\");",
+									"tests[\"contact_num\"] = responseBody.has(\"572603\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "BK"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Service-Bench-Credentials",
+								"value": "pONx7W/1/hjHMrYI2z5UA9niMRaIBYd2pFLnZWF8W3x35+ef/z4w+fcM9bU5Dm/32A7hMhR/xUVooyXjt6/bCRKz5f0Vl+FkD2zB1+ZzKl0Xz6GHwqD72X5jPAqUCGEX"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/warranty/claim",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"warranty",
+								"claim"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "baf97741-8df2-4b5d-9553-3b0ea1d515e1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e79a9ad0-3807-40ec-8084-130e58e5b0f2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

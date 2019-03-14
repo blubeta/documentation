@@ -1,0 +1,2441 @@
+{
+	"info": {
+		"_postman_id": "97a253a9-adb2-4cdc-afc8-e4e3ecb18cf4",
+		"name": "API-Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Doc Search",
+			"item": [
+				{
+					"name": "DocumentTypeahead",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "bk"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/documents/typeahead?q=n4a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"documents",
+								"typeahead"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "n4a"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Valid response 32017",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
+									"name": "Access-Control-Allow-Headers",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST,GET,PUT,DELETE,PATCH,OPTIONS",
+									"name": "Access-Control-Allow-Methods",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Length",
+									"value": "4884",
+									"name": "Content-Length",
+									"description": ""
+								},
+								{
+									"key": "Content-Security-Policy-Report-Only",
+									"value": ": default-src 'none'; report-uri 'https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/csp/reportOnly';",
+									"name": "Content-Security-Policy-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Mar 2017 17:42:37 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Public-Key-Pins-Report-Only",
+									"value": "pin-sha256=\"wN0C+Soiq1mDJQC+z1wgNEjGhJNZOT347K0L9cp6/9o=\"; pin-sha256=\"Jewx1Ci1bV+NmwlDKtgCdgl1AaJC4X7G6lyVgQxxLAI=\"; pin-sha256=\"Vjs8r4z+80wjNcr1YKepWQboSIRi63WsWXhIMN+eWys=\"; pin-sha256=\"AG1751Vd2CAmRCxPGieoDomhmJy4ezREjtIZTBgZbV4=\"; pin-sha256=\"K87oWBWM9UZfyddvDfoxL+8lpNyoUB2ptGtn0fv6G2Q=\"; report-uri=\"https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/hpkp/reportOnly\"; max-age=5184000; includeSubDomains",
+									"name": "Public-Key-Pins-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains; preload",
+									"name": "Strict-Transport-Security",
+									"description": ""
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"name": "X-Content-Type-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"name": "X-Frame-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "8cf03bdb383213ecb7b3d58436ceb1e1",
+									"name": "X-Request-Id",
+									"description": ""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"name": "X-XSS-Protection",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"meta\":{\"version\":\"0.19.2\",\"commit\":\"9c25cdc\",\"container\":\"72e0e08e92a8\",\"env\":\"staging\",\"copyright\":\"Copyright (c) 2015 - 2017 Watsco. All rights reserved.\",\"authors\":[\"will Farrell <wfarrell@watsco.com>\"],\"now\":\"2017-03-20T17:42:37.175Z\"},\"links\":{\"self\":\"https://api.staging.mobile.ductoid.com/api/product/documents/typeahead?q=n4a\",\"docs\":\"https://api.staging.mobile.ductoid.com/docs\"},\"data\":[{\"family_name\":\"N4A318AKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A318AKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A318AKN\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A318CKA\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A318GKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A324AKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A324AKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A324AKN\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A324CKA\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A324GKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A330AKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A330AKN\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A330CKA\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A330GKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A336AKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A336AKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A336AKN\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A336CKA\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A336GKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A336GKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A342AKA\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A342AKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A342AKN\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A342CKA\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A342GKA\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A342GKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A348AKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A348AKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A348AKN\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A348CKA\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A348GKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A348GKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A360AKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A360AKN\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A360CKA\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A360GKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A418AKA\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A418GKA\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A424AKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A424GKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A430AKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A430GKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A436AKA\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A436GKA\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A442AKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A442GKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A448AKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A448GKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A449AKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A449GKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A460AKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A460GKB\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A518GKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A524GKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A530GKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A536GKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A542GKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A548GKC\",\"manufacturer\":\"International Comfort Products\"},{\"family_name\":\"N4A560GKC\",\"manufacturer\":\"International Comfort Products\"}]}"
+						}
+					]
+				},
+				{
+					"name": "GetDocuments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "bk"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/N4A318AKC/documents",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"N4A318AKC",
+								"documents"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Valid response 32017",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
+									"name": "Access-Control-Allow-Headers",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST,GET,PUT,DELETE,PATCH,OPTIONS",
+									"name": "Access-Control-Allow-Methods",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Length",
+									"value": "645",
+									"name": "Content-Length",
+									"description": ""
+								},
+								{
+									"key": "Content-Security-Policy-Report-Only",
+									"value": ": default-src 'none'; report-uri 'https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/csp/reportOnly';",
+									"name": "Content-Security-Policy-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Mar 2017 17:19:46 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Public-Key-Pins-Report-Only",
+									"value": "pin-sha256=\"wN0C+Soiq1mDJQC+z1wgNEjGhJNZOT347K0L9cp6/9o=\"; pin-sha256=\"Jewx1Ci1bV+NmwlDKtgCdgl1AaJC4X7G6lyVgQxxLAI=\"; pin-sha256=\"Vjs8r4z+80wjNcr1YKepWQboSIRi63WsWXhIMN+eWys=\"; pin-sha256=\"AG1751Vd2CAmRCxPGieoDomhmJy4ezREjtIZTBgZbV4=\"; pin-sha256=\"K87oWBWM9UZfyddvDfoxL+8lpNyoUB2ptGtn0fv6G2Q=\"; report-uri=\"https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/hpkp/reportOnly\"; max-age=5184000; includeSubDomains",
+									"name": "Public-Key-Pins-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains; preload",
+									"name": "Strict-Transport-Security",
+									"description": ""
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"name": "X-Content-Type-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"name": "X-Frame-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Rate-Limit-Limit",
+									"value": "100000",
+									"name": "X-Rate-Limit-Limit",
+									"description": ""
+								},
+								{
+									"key": "X-Rate-Limit-Remaining",
+									"value": "99999",
+									"name": "X-Rate-Limit-Remaining",
+									"description": ""
+								},
+								{
+									"key": "X-Rate-Limit-Reset",
+									"value": "2017-03-20T17:20:46.156Z",
+									"name": "X-Rate-Limit-Reset",
+									"description": ""
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "6558477d181fc9a9fbb6033da7d85a74",
+									"name": "X-Request-Id",
+									"description": ""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"name": "X-XSS-Protection",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"meta\":{\"version\":\"0.19.2\",\"commit\":\"9c25cdc\",\"container\":\"72e0e08e92a8\",\"env\":\"staging\",\"copyright\":\"Copyright (c) 2015 - 2017 Watsco. All rights reserved.\",\"authors\":[\"will Farrell <wfarrell@watsco.com>\"],\"now\":\"2017-03-20T17:19:46.157Z\"},\"links\":{\"self\":\"https://api.staging.mobile.ductoid.com/api/product/N4A318AKB/documents\",\"docs\":\"https://api.staging.mobile.ductoid.com/docs\"},\"data\":[{\"document_title\":\"Tempstar Consumer Literature\",\"document_name\":\"Consumer Literature\",\"document_url\":\"http://resource.bakerdist.com/is/content/Watscocom/Gemaire/tempstar_n4a318akb_article_1472805142650_en_cl.pdf\",\"document_model_family\":\"N4A318AKB\"}]}"
+						}
+					]
+				},
+				{
+					"name": "Get Documents - EC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"// test that we got a valid response",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Looking for heiler_num\"] = responseBody.has(\"1428408500474\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "ec"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/GSX130361/documents",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"GSX130361",
+								"documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Documents with metadata - EC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"// test that we got a valid response",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Looking for heiler_num\"] = responseBody.has(\"1428408500474\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "ec"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/GSX130361/documents_with_metadata",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"GSX130361",
+								"documents_with_metadata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchDocuments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "GM"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/documents/search?q=w281313607",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"documents",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "w281313607"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Valid response 32017",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
+									"name": "Access-Control-Allow-Headers",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST,GET,PUT,DELETE,PATCH,OPTIONS",
+									"name": "Access-Control-Allow-Methods",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Length",
+									"value": "10373",
+									"name": "Content-Length",
+									"description": ""
+								},
+								{
+									"key": "Content-Security-Policy-Report-Only",
+									"value": ": default-src 'none'; report-uri 'https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/csp/reportOnly';",
+									"name": "Content-Security-Policy-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Mar 2017 17:14:37 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Public-Key-Pins-Report-Only",
+									"value": "pin-sha256=\"wN0C+Soiq1mDJQC+z1wgNEjGhJNZOT347K0L9cp6/9o=\"; pin-sha256=\"Jewx1Ci1bV+NmwlDKtgCdgl1AaJC4X7G6lyVgQxxLAI=\"; pin-sha256=\"Vjs8r4z+80wjNcr1YKepWQboSIRi63WsWXhIMN+eWys=\"; pin-sha256=\"AG1751Vd2CAmRCxPGieoDomhmJy4ezREjtIZTBgZbV4=\"; pin-sha256=\"K87oWBWM9UZfyddvDfoxL+8lpNyoUB2ptGtn0fv6G2Q=\"; report-uri=\"https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/hpkp/reportOnly\"; max-age=5184000; includeSubDomains",
+									"name": "Public-Key-Pins-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains; preload",
+									"name": "Strict-Transport-Security",
+									"description": ""
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"name": "X-Content-Type-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"name": "X-Frame-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "34bd59e3c3f4928d58884e9a518eb8f9",
+									"name": "X-Request-Id",
+									"description": ""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"name": "X-XSS-Protection",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"meta\":{\"version\":\"0.19.2\",\"commit\":\"9c25cdc\",\"container\":\"72e0e08e92a8\",\"env\":\"staging\",\"copyright\":\"Copyright (c) 2015 - 2017 Watsco. All rights reserved.\",\"authors\":[\"will Farrell <wfarrell@watsco.com>\"],\"now\":\"2017-03-20T17:14:36.875Z\"},\"links\":{\"self\":\"https://api.staging.mobile.ductoid.com/api/product/documents/search?q=n4a\",\"docs\":\"https://api.staging.mobile.ductoid.com/docs\"},\"data\":[{\"model_num\":\"N4A318AKB\",\"model_description\":\"N4A318AKB - 1-1/2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A318AKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A318AKC\",\"model_description\":\"N4A318AKC - 1-1/2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A318AKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A318AKN\",\"model_description\":\"N4A318AKN - 1-1/2 Ton Efficient 13 SEER Air Conditioner Environmentally Sound R410A Refrigerant\",\"model_family\":\"N4A318AKN\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A318CKA\",\"model_description\":\"N4A318CKA - 1-1/2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A318CKA\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A318GKC\",\"model_description\":\"N4A318GKC - 1-1/2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A318GKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A324AKB\",\"model_description\":\"N4A324AKB - 2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A324AKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A324AKC\",\"model_description\":\"N4A324AKC - 2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A324AKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A324AKN\",\"model_description\":\"N4A324AKN - 2 Ton Efficient 13 SEER Air Conditioner Environmentally Sound R410A Refrigerant\",\"model_family\":\"N4A324AKN\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A324CKA\",\"model_description\":\"N4A324CKA - 2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A324CKA\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A324GKC\",\"model_description\":\"N4A324GKC - 2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A324GKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A330AKC\",\"model_description\":\"N4A330AKC - 2-1/2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A330AKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A330AKN\",\"model_description\":\"N4A330AKN - 2-1/2 Ton Efficient 13 SEER Air Conditioner Environmentally Sound R410A Refrigerant\",\"model_family\":\"N4A330AKN\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A330CKA\",\"model_description\":\"N4A330CKA - 2-1/2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A330CKA\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A330GKC\",\"model_description\":\"N4A330GKC - 2-1/2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A330GKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A336AKB\",\"model_description\":\"N4A336AKB - 3 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A336AKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A336AKC\",\"model_description\":\"N4A336AKC - 3 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A336AKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A336AKN\",\"model_description\":\"N4A336AKN - 3 Ton Efficient 13 SEER Air Conditioner Environmentally Sound R410A Refrigerant\",\"model_family\":\"N4A336AKN\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A336CKA\",\"model_description\":\"N4A336CKA - 3 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A336CKA\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A336GKB\",\"model_description\":\"N4A336GKB - 3 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A336GKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A336GKC\",\"model_description\":\"N4A336GKC - 3 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A336GKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A342AKA\",\"model_description\":\"N4A342AKA - 3-1/2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A342AKA\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A342AKB\",\"model_description\":\"N4A342AKB - 3-1/2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A342AKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A342AKN\",\"model_description\":\"N4A342AKN - 3-1/2 Ton Efficient 13 SEER Air Conditioner Environmentally Sound R410A Refrigerant\",\"model_family\":\"N4A342AKN\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A342CKA\",\"model_description\":\"N4A342CKA - 3-1/2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A342CKA\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A342GKA\",\"model_description\":\"N4A342GKA - 3-1/2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A342GKA\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A342GKB\",\"model_description\":\"N4A342GKB - 3-1/2 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A342GKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A348AKB\",\"model_description\":\"N4A348AKB - 4 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A348AKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A348AKC\",\"model_description\":\"N4A348AKC - 4 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A348AKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A348AKN\",\"model_description\":\"N4A348AKN - 4 Ton Efficient 13 SEER Air Conditioner Environmentally Sound R410A Refrigerant\",\"model_family\":\"N4A348AKN\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A348CKA\",\"model_description\":\"N4A348CKA - 4 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A348CKA\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A348GKB\",\"model_description\":\"N4A348GKB - 4 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A348GKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A348GKC\",\"model_description\":\"N4A348GKC - 4 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A348GKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A360AKC\",\"model_description\":\"N4A360AKC - 5 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A360AKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A360AKN\",\"model_description\":\"N4A360AKN - 5 Ton Efficient 13 SEER Air Conditioner Environmentally Sound R410A Refrigerant\",\"model_family\":\"N4A360AKN\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A360CKA\",\"model_description\":\"N4A360CKA - 5 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A360CKA\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A360GKC\",\"model_description\":\"N4A360GKC - 5 Ton 13 SEER A/C Condenser R410A\",\"model_family\":\"N4A360GKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A418AKA\",\"model_description\":\"N4A418AKA - 1-1/2 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A418AKA\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A418GKA\",\"model_description\":\"N4A418GKA - 1-1/2 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A418GKA\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A424AKB\",\"model_description\":\"N4A424AKB - 2 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A424AKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A424GKB\",\"model_description\":\"N4A424GKB - 2 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A424GKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A430AKB\",\"model_description\":\"N4A430AKB - 2-1/2 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A430AKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A430GKB\",\"model_description\":\"N4A430GKB - 2-1/2 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A430GKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A436AKA\",\"model_description\":\"N4A436AKA - 3 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A436AKA\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A436GKA\",\"model_description\":\"N4A436GKA - 3 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A436GKA\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A442AKB\",\"model_description\":\"N4A442AKB - 3-1/2 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A442AKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A442GKB\",\"model_description\":\"N4A442GKB - 3-1/2 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A442GKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A448AKB\",\"model_description\":\"N4A448AKB - 4 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A448AKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A448GKB\",\"model_description\":\"N4A448GKB - 4 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A448GKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A449AKB\",\"model_description\":\"N4A449AKB - 4 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A449AKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A449GKB\",\"model_description\":\"N4A449GKB - 4 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A449GKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A460AKB\",\"model_description\":\"N4A460AKB - 5 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A460AKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A460GKB\",\"model_description\":\"N4A460GKB - 5 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A460GKB\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A518GKC\",\"model_description\":\"N4A518GKC - 1-1/2 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A518GKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A524GKC\",\"model_description\":\"N4A524GKC - 2 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A524GKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A530GKC\",\"model_description\":\"N4A530GKC - 2-1/2 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A530GKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A536GKC\",\"model_description\":\"N4A536GKC - 3 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A536GKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A542GKC\",\"model_description\":\"N4A542GKC - 3-1/2 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A542GKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A548GKC\",\"model_description\":\"N4A548GKC - 4 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A548GKC\",\"brand\":\"International Comfort Products\"},{\"model_num\":\"N4A560GKC\",\"model_description\":\"N4A560GKC - 5 Ton 14 SEER A/C Condenser R410A\",\"model_family\":\"N4A560GKC\",\"brand\":\"International Comfort Products\"}]}"
+						}
+					]
+				},
+				{
+					"name": "Document Search with Serial No - GM",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "GM"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/documents/search?q=w281313607",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"documents",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "w281313607"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Parts List",
+			"item": [
+				{
+					"name": "Model Search - CE",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "CE"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/model/search?q=24a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"model",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "24a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModelTypeahead - CE",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "ce"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/model/typeahead?q=24a&search_type=search",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"model",
+								"typeahead"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "24a"
+								},
+								{
+									"key": "search_type",
+									"value": "search"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PartsList details - CE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"// test that we got a valid response",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"part_num\"] = responseBody.has(\"1171270\");",
+									"tests[\"part_description\"] = responseBody.has(\"GROMMET COMPRESSOR 1.62\");",
+									"tests[\"item_id\"] = responseBody.has(\"1171270\");",
+									"tests[\"has_supersedes\"] = responseBody.has(\"false\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "CE"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/FB4CNF024000ABAA/parts_list",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"FB4CNF024000ABAA",
+								"parts_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Model Search - BK",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-bu",
+								"value": "BK"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "BK"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/model/search?q=n4a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"model",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "n4a"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Valid response 32017",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
+									"name": "Access-Control-Allow-Headers",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST,GET,PUT,DELETE,PATCH,OPTIONS",
+									"name": "Access-Control-Allow-Methods",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Length",
+									"value": "8963",
+									"name": "Content-Length",
+									"description": ""
+								},
+								{
+									"key": "Content-Security-Policy-Report-Only",
+									"value": ": default-src 'none'; report-uri 'https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/csp/reportOnly';",
+									"name": "Content-Security-Policy-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Mar 2017 17:21:21 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Public-Key-Pins-Report-Only",
+									"value": "pin-sha256=\"wN0C+Soiq1mDJQC+z1wgNEjGhJNZOT347K0L9cp6/9o=\"; pin-sha256=\"Jewx1Ci1bV+NmwlDKtgCdgl1AaJC4X7G6lyVgQxxLAI=\"; pin-sha256=\"Vjs8r4z+80wjNcr1YKepWQboSIRi63WsWXhIMN+eWys=\"; pin-sha256=\"AG1751Vd2CAmRCxPGieoDomhmJy4ezREjtIZTBgZbV4=\"; pin-sha256=\"K87oWBWM9UZfyddvDfoxL+8lpNyoUB2ptGtn0fv6G2Q=\"; report-uri=\"https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/hpkp/reportOnly\"; max-age=5184000; includeSubDomains",
+									"name": "Public-Key-Pins-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains; preload",
+									"name": "Strict-Transport-Security",
+									"description": ""
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"name": "X-Content-Type-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"name": "X-Frame-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "967f9c55712ef2ab01a8bd1f63bfb9be",
+									"name": "X-Request-Id",
+									"description": ""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"name": "X-XSS-Protection",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"meta\":{\"version\":\"0.19.2\",\"commit\":\"9c25cdc\",\"container\":\"72e0e08e92a8\",\"env\":\"staging\",\"copyright\":\"Copyright (c) 2015 - 2017 Watsco. All rights reserved.\",\"authors\":[\"will Farrell <wfarrell@watsco.com>\"],\"now\":\"2017-03-20T17:21:21.580Z\"},\"links\":{\"self\":\"https://api.staging.mobile.ductoid.com/api/product/model/search?q=n4a\",\"docs\":\"https://api.staging.mobile.ductoid.com/docs\"},\"data\":[{\"model_num\":\"N4A318AKA100\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318AKA200\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318AKA300\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318AKB100\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318AKB200\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318AKB300\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318AKC100\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318AKN100\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318AKN300\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318CKA100\",\"model_description\":\"COND AC R410A, 1.5 TON, 13 SEER, 208/230-1-60, COASTAL\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318CKN100\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60, COASTAL\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318GKA100\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318GKA200\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318GKA300\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318GKB100\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318GKB200\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318GKB300\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318GKC100\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318GKN100\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A318GKN300\",\"model_description\":\"COND A/C R410A, 1.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324AKA100\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324AKA200\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324AKA300\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324AKB100\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324AKB200\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324AKC100\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324AKN100\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324AKN200\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324CKA100\",\"model_description\":\"COND AC R410A, 2.0 TON, 13 SEER, 208/230-1-60, COASTAL\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324CKN100\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60, COASTAL\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324GKA100\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324GKA200\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324GKA300\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324GKB100\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324GKB200\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324GKC100\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324GKN100\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A324GKN200\",\"model_description\":\"COND A/C R410A, 2.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330AKA100\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330AKB100\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330AKB200\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330AKB300\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330AKC100\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330AKC200\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330AKN200\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330CKA100\",\"model_description\":\"COND AC R410A, 2.5 TON, 13 SEER, 208/230-1-60, COASTAL\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330CKN100\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60, COASTAL\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330GHC200\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-3-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330GKA100\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330GKB100\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330GKB200\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330GKB300\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330GKC100\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330GKC200\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A330GKN200\",\"model_description\":\"COND A/C R410A, 2.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336AKA100\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336AKA200\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336AKB100\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336AKB200\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336AKB300\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336AKC100\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER,208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336AKN300\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336CKA100\",\"model_description\":\"COND AC R410A, 3.0 TON, 13 SEER, 208/230-1-60, COASTAL\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336CKN100\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-1-60, COASTAL\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336GHB200\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-3-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336GKA100\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336GKA200\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336GKB100\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336GKB200\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336GKB300\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336GKC100\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER,208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336GKN300\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336GLB200\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 460-3-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A336GSB200\",\"model_description\":\"COND A/C R410A, 3.0 TON, 13 SEER, 575-3-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A342AKA100\",\"model_description\":\"COND A/C R410A, 3.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A342AKA200\",\"model_description\":\"COND A/C R410A, 3.5 TON, 13 SEER, 208/230-1-60\",\"brand\":\"ICP\"}]}"
+						}
+					]
+				},
+				{
+					"name": "ModelTypeahead - BK",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "BK"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/model/typeahead?q=n4a44",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"model",
+								"typeahead"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "n4a44"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Valid response 32017",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
+									"name": "Access-Control-Allow-Headers",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST,GET,PUT,DELETE,PATCH,OPTIONS",
+									"name": "Access-Control-Allow-Methods",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Length",
+									"value": "2656",
+									"name": "Content-Length",
+									"description": ""
+								},
+								{
+									"key": "Content-Security-Policy-Report-Only",
+									"value": ": default-src 'none'; report-uri 'https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/csp/reportOnly';",
+									"name": "Content-Security-Policy-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Mar 2017 17:21:27 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Public-Key-Pins-Report-Only",
+									"value": "pin-sha256=\"wN0C+Soiq1mDJQC+z1wgNEjGhJNZOT347K0L9cp6/9o=\"; pin-sha256=\"Jewx1Ci1bV+NmwlDKtgCdgl1AaJC4X7G6lyVgQxxLAI=\"; pin-sha256=\"Vjs8r4z+80wjNcr1YKepWQboSIRi63WsWXhIMN+eWys=\"; pin-sha256=\"AG1751Vd2CAmRCxPGieoDomhmJy4ezREjtIZTBgZbV4=\"; pin-sha256=\"K87oWBWM9UZfyddvDfoxL+8lpNyoUB2ptGtn0fv6G2Q=\"; report-uri=\"https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/hpkp/reportOnly\"; max-age=5184000; includeSubDomains",
+									"name": "Public-Key-Pins-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains; preload",
+									"name": "Strict-Transport-Security",
+									"description": ""
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"name": "X-Content-Type-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"name": "X-Frame-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "c97075f2be022cbd8825174cacee4c89",
+									"name": "X-Request-Id",
+									"description": ""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"name": "X-XSS-Protection",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"meta\":{\"version\":\"0.19.2\",\"commit\":\"9c25cdc\",\"container\":\"72e0e08e92a8\",\"env\":\"staging\",\"copyright\":\"Copyright (c) 2015 - 2017 Watsco. All rights reserved.\",\"authors\":[\"will Farrell <wfarrell@watsco.com>\"],\"now\":\"2017-03-20T17:21:27.498Z\"},\"links\":{\"self\":\"https://api.staging.mobile.ductoid.com/api/product/model/typeahead?q=n4a44\",\"docs\":\"https://api.staging.mobile.ductoid.com/docs\"},\"data\":[{\"model_num\":\"N4A442AKA100\",\"model_description\":\"COND A/C R410A, 3.5 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A442AKB100\",\"model_description\":\"COND A/C R410A, 3.5 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A442AKB200\",\"model_description\":\"COND A/C R410A, 3.5 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A442AKB300\",\"model_description\":\"COND A/C R410A, 3.5 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A442CKA101\",\"model_description\":\"COND A/C R410A, 3.5 TON, 14 SEER, 208/230-1-60, COASTAL\",\"brand\":\"ICP\"},{\"model_num\":\"N4A442GKA100\",\"model_description\":\"COND A/C R410A, 3.5 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A442GKB100\",\"model_description\":\"COND A/C R410A, 3.5 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A442GKB200\",\"model_description\":\"COND A/C R410A, 3.5 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A442GKB300\",\"model_description\":\"COND A/C R410A, 3.5 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A448AKA100\",\"model_description\":\"COND A/C R410A, 4.0 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A448AKB100\",\"model_description\":\"COND A/C R410A, 4.0 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A448AKB200\",\"model_description\":\"COND A/C R410A, 4.0 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A448AKB300\",\"model_description\":\"COND A/C R410A, 4.0 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A448CKA101\",\"model_description\":\"COND A/C R410A, 4.0 TON, 14 SEER, 208/230-1-60, COASTAL\",\"brand\":\"ICP\"},{\"model_num\":\"N4A448GKA100\",\"model_description\":\"COND A/C R410A, 4.0 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A448GKB100\",\"model_description\":\"COND A/C R410A, 4.0 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A448GKB200\",\"model_description\":\"COND A/C R410A, 4.0 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A448GKB300\",\"model_description\":\"COND A/C R410A, 4.0 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A449AKB300\",\"model_description\":\"COND A/C R410A, 4.0 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"},{\"model_num\":\"N4A449GKB300\",\"model_description\":\"COND A/C R410A, 4.0 TON, 14 SEER, 208/230-1-60\",\"brand\":\"ICP\"}]}"
+						}
+					]
+				},
+				{
+					"name": "PartsList details - BK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"// test that we got a valid response",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"part_num\"] = responseBody.has(\"1171270\");",
+									"tests[\"part_description\"] = responseBody.has(\"GROMMET COMPRESSOR 1.62\");",
+									"tests[\"item_id\"] = responseBody.has(\"1171270\");",
+									"tests[\"has_supersedes\"] = responseBody.has(\"false\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-bu",
+								"value": "BK"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "BK"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/RAH150H0EA0AAAA/parts_list?region_code=",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"RAH150H0EA0AAAA",
+								"parts_list"
+							],
+							"query": [
+								{
+									"key": "region_code",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Valid response 32017",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
+									"name": "Access-Control-Allow-Headers",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST,GET,PUT,DELETE,PATCH,OPTIONS",
+									"name": "Access-Control-Allow-Methods",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Length",
+									"value": "6075",
+									"name": "Content-Length",
+									"description": ""
+								},
+								{
+									"key": "Content-Security-Policy-Report-Only",
+									"value": ": default-src 'none'; report-uri 'https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/csp/reportOnly';",
+									"name": "Content-Security-Policy-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Mar 2017 17:21:34 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Public-Key-Pins-Report-Only",
+									"value": "pin-sha256=\"wN0C+Soiq1mDJQC+z1wgNEjGhJNZOT347K0L9cp6/9o=\"; pin-sha256=\"Jewx1Ci1bV+NmwlDKtgCdgl1AaJC4X7G6lyVgQxxLAI=\"; pin-sha256=\"Vjs8r4z+80wjNcr1YKepWQboSIRi63WsWXhIMN+eWys=\"; pin-sha256=\"AG1751Vd2CAmRCxPGieoDomhmJy4ezREjtIZTBgZbV4=\"; pin-sha256=\"K87oWBWM9UZfyddvDfoxL+8lpNyoUB2ptGtn0fv6G2Q=\"; report-uri=\"https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/hpkp/reportOnly\"; max-age=5184000; includeSubDomains",
+									"name": "Public-Key-Pins-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains; preload",
+									"name": "Strict-Transport-Security",
+									"description": ""
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"name": "X-Content-Type-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"name": "X-Frame-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Rate-Limit-Limit",
+									"value": "100000",
+									"name": "X-Rate-Limit-Limit",
+									"description": ""
+								},
+								{
+									"key": "X-Rate-Limit-Remaining",
+									"value": "99999",
+									"name": "X-Rate-Limit-Remaining",
+									"description": ""
+								},
+								{
+									"key": "X-Rate-Limit-Reset",
+									"value": "2017-03-20T17:22:32.460Z",
+									"name": "X-Rate-Limit-Reset",
+									"description": ""
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "a2ed27149367dfcca082696e60894b1f",
+									"name": "X-Request-Id",
+									"description": ""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"name": "X-XSS-Protection",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"meta\":{\"version\":\"0.19.2\",\"commit\":\"9c25cdc\",\"container\":\"72e0e08e92a8\",\"env\":\"staging\",\"copyright\":\"Copyright (c) 2015 - 2017 Watsco. All rights reserved.\",\"authors\":[\"will Farrell <wfarrell@watsco.com>\"],\"now\":\"2017-03-20T17:21:32.461Z\"},\"links\":{\"self\":\"https://api.staging.mobile.ductoid.com/api/product/N4A318AKA100/parts_list\",\"docs\":\"https://api.staging.mobile.ductoid.com/docs\"},\"data\":[{\"part_num\":\"1171270\",\"part_description\":\"GROMMET COMPRESSOR 1.62\\\"DIA  S\",\"item_id\":\"1171270\",\"has_supersedes\":false},{\"part_num\":\"1172009\",\"part_description\":\"DRIER LIQ 16 CI 3/8 SWEAT\",\"item_id\":\"1172009\",\"heiler_num\":1418039185309,\"has_supersedes\":false},{\"part_num\":\"1172009\",\"part_description\":\"DRIER LIQ 16 CI 3/8 SWEAT\",\"item_id\":\"1172009\",\"heiler_num\":1418039185309,\"has_supersedes\":false},{\"part_num\":\"1172109\",\"part_description\":\"CAP RN RD 370V 5+30    X\",\"item_id\":\"1172109\",\"has_supersedes\":true},{\"part_num\":\"1172300\",\"part_description\":\"LUG GROUND\",\"item_id\":\"1172300\",\"has_supersedes\":false},{\"part_num\":\"1172472\",\"part_description\":\"CONTACTOR 1P 30A 24V W/SHUNT\",\"item_id\":\"1172472\",\"heiler_num\":1418039186488,\"has_supersedes\":false},{\"part_num\":\"1172472\",\"part_description\":\"CONTACTOR 1P 30A 24V W/SHUNT\",\"item_id\":\"1172472\",\"has_supersedes\":false},{\"part_num\":\"1172472\",\"part_description\":\"CONTACTOR 1P 30A 24V W/SHUNT\",\"item_id\":\"1172472\",\"has_supersedes\":false},{\"part_num\":\"1172706\",\"part_description\":\"MTR CND 1/230 1/12 1100\",\"item_id\":\"1172706\",\"heiler_num\":1418039186954,\"has_supersedes\":false},{\"part_num\":\"1172706\",\"part_description\":\"MTR CND 1/230 1/12 1100\",\"item_id\":\"1172706\",\"heiler_num\":1418039186954,\"has_supersedes\":false},{\"part_num\":\"1172706\",\"part_description\":\"MTR CND 1/230 1/12 1100\",\"item_id\":\"1172706\",\"heiler_num\":1418039186954,\"has_supersedes\":false},{\"part_num\":\"1172711\",\"part_description\":\"FAN C 20\\\" 2B 1/2\\\" 20 INT\",\"item_id\":\"1172711\",\"heiler_num\":1418039184921,\"has_supersedes\":false},{\"part_num\":\"1172711\",\"part_description\":\"FAN C 20\\\" 2B 1/2\\\" 20 INT\",\"item_id\":\"1172711\",\"heiler_num\":1418039184921,\"has_supersedes\":false},{\"part_num\":\"1172711\",\"part_description\":\"FAN C 20\\\" 2B 1/2\\\" 20 INT\",\"item_id\":\"1172711\",\"heiler_num\":1418039184921,\"has_supersedes\":false},{\"part_num\":\"1172720\",\"part_description\":\"COND COIL REPLACEMENT KIT\",\"item_id\":\"1172720\",\"has_supersedes\":false},{\"part_num\":\"1172720\",\"part_description\":\"COND COIL REPLACEMENT KIT\",\"item_id\":\"1172720\",\"has_supersedes\":false},{\"part_num\":\"1172725\",\"part_description\":\"VALVE SVC PARK SUC 10S-10S\",\"item_id\":\"1172725\",\"has_supersedes\":true},{\"part_num\":\"1172725\",\"part_description\":\"VALVE SVC PARK SUC 10S-10S\",\"item_id\":\"1172725\",\"has_supersedes\":true},{\"part_num\":\"1172725\",\"part_description\":\"VALVE SVC PARK SUC 10S-10S\",\"item_id\":\"1172725\",\"has_supersedes\":true},{\"part_num\":\"1172728\",\"part_description\":\"VALVE SVC PARK LIQ 06S-06S\",\"item_id\":\"1172728\",\"has_supersedes\":true},{\"part_num\":\"1172728\",\"part_description\":\"VALVE SVC PARK LIQ 06S-06S\",\"item_id\":\"1172728\",\"has_supersedes\":true},{\"part_num\":\"1172728\",\"part_description\":\"VALVE SVC PARK LIQ 06S-06S\",\"item_id\":\"1172728\",\"has_supersedes\":true},{\"part_num\":\"1172729\",\"part_description\":\"PLUG COMP WIRE (SM) 14GAx38\\\"\",\"item_id\":\"1172729\",\"heiler_num\":1418039185881,\"has_supersedes\":false},{\"part_num\":\"1172729\",\"part_description\":\"PLUG COMP WIRE (SM) 14GAx38\\\"\",\"item_id\":\"1172729\",\"heiler_num\":1418039185881,\"has_supersedes\":false},{\"part_num\":\"1172734\",\"part_description\":\"CLAMP 2\\\" OD\",\"item_id\":\"1172734\",\"has_supersedes\":false},{\"part_num\":\"1172736\",\"part_description\":\"HARNESS WIRE ASY\",\"item_id\":\"1172736\",\"has_supersedes\":false},{\"part_num\":\"1172740\",\"part_description\":\"NUT CAP\",\"item_id\":\"1172740\",\"heiler_num\":1418039187730,\"has_supersedes\":false},{\"part_num\":\"1172740\",\"part_description\":\"NUT CAP\",\"item_id\":\"1172740\",\"heiler_num\":1418039187730,\"has_supersedes\":false},{\"part_num\":\"1172741\",\"part_description\":\"GRILLE INLET FORMED\",\"item_id\":\"1172741\",\"has_supersedes\":false},{\"part_num\":\"1172753\",\"part_description\":\"BOX CONTROL\",\"item_id\":\"1172753\",\"has_supersedes\":false},{\"part_num\":\"1172755\",\"part_description\":\"SVCE PNL ASSY\",\"item_id\":\"1172755\",\"has_supersedes\":false},{\"part_num\":\"1172763\",\"part_description\":\"GRILLE DISCHARGE\",\"item_id\":\"1172763\",\"has_supersedes\":false},{\"part_num\":\"1172763\",\"part_description\":\"GRILLE DISCHARGE\",\"item_id\":\"1172763\",\"has_supersedes\":false},{\"part_num\":\"1173630\",\"part_description\":\"BOLT SHLDR COMP. MTG,\",\"item_id\":\"1173630\",\"has_supersedes\":true},{\"part_num\":\"1173642\",\"part_description\":\"RACEWAY\",\"item_id\":\"1173642\",\"has_supersedes\":false},{\"part_num\":\"1174064\",\"part_description\":\"TOP COVER ASSY MOLDED SML\",\"item_id\":\"1174064\",\"has_supersedes\":true},{\"part_num\":\"1174065\",\"part_description\":\"CTL BX COV ASSY\",\"item_id\":\"1174065\",\"has_supersedes\":true},{\"part_num\":\"1174067\",\"part_description\":\"BASE PAN ASSY\",\"item_id\":\"1174067\",\"has_supersedes\":false},{\"part_num\":\"1174068\",\"part_description\":\"SUPPORT COIL\",\"item_id\":\"1174068\",\"has_supersedes\":false},{\"part_num\":\"1174100\",\"part_description\":\"FILTER DRIER KIT 08 CI\",\"item_id\":\"1174100\",\"has_supersedes\":true},{\"part_num\":\"1174676\",\"part_description\":\"SCREW HEX HEAD #10 X 3/8\\\" GRAY\",\"item_id\":\"1174676\",\"has_supersedes\":true},{\"part_num\":\"1174677\",\"part_description\":\"SCREW HEX HEAD #10 X 1/2\\\" GRAY\",\"item_id\":\"1174677\",\"has_supersedes\":true},{\"part_num\":\"1174678\",\"part_description\":\"SCREW HEX HEAD #12 X 5/8\\\" GRAY\",\"item_id\":\"1174678\",\"has_supersedes\":true},{\"part_num\":\"1175650\",\"part_description\":\"CAP SERVICE KIT 11/16-20\",\"item_id\":\"1175650\",\"heiler_num\":1418039190236,\"has_supersedes\":false},{\"part_num\":\"1175650\",\"part_description\":\"CAP SERVICE KIT 11/16-20\",\"item_id\":\"1175650\",\"heiler_num\":1418039190236,\"has_supersedes\":false},{\"part_num\":\"1175651\",\"part_description\":\"CAP SERVICE KIT 15/16-20\",\"item_id\":\"1175651\",\"has_supersedes\":false},{\"part_num\":\"1175651\",\"part_description\":\"CAP SERVICE KIT 15/16-20\",\"item_id\":\"1175651\",\"has_supersedes\":false},{\"part_num\":\"ZP16K5EPFV130\",\"part_description\":\"COMP ZP16K5E-PFV-130\",\"item_id\":\"ZP16K5EPFV130\",\"has_supersedes\":true}]}"
+						}
+					]
+				},
+				{
+					"name": "ModelTypeahead - EC",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "EC"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/model/typeahead?q=gsx",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"model",
+								"typeahead"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "gsx"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Model Search - EC",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "EC"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/model/search?q=GSX",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"model",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "GSX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PartsList details - EC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"// test that we got a valid response",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"part_num\"] = responseBody.has(\"1171270\");",
+									"tests[\"part_description\"] = responseBody.has(\"GROMMET COMPRESSOR 1.62\");",
+									"tests[\"item_id\"] = responseBody.has(\"1171270\");",
+									"tests[\"has_supersedes\"] = responseBody.has(\"false\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-bu",
+								"value": "EC"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "EC"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/GSX130181CA/parts_list",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"GSX130181CA",
+								"parts_list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "TEST",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
+									"name": "Access-Control-Allow-Headers",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST,GET,PUT,DELETE,PATCH,OPTIONS",
+									"name": "Access-Control-Allow-Methods",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Length",
+									"value": "3082",
+									"name": "Content-Length",
+									"description": ""
+								},
+								{
+									"key": "Content-Security-Policy-Report-Only",
+									"value": ": default-src 'none'; report-uri 'https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/csp/reportOnly';",
+									"name": "Content-Security-Policy-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Jun 2017 13:17:15 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Public-Key-Pins-Report-Only",
+									"value": "max-age=5184000; includeSubDomains; report-uri=\"https://bc8919ea4220b6ad6f4b84f43190dc3f.report-uri.io/r/default/hpkp/reportOnly\"",
+									"name": "Public-Key-Pins-Report-Only",
+									"description": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"name": "Referrer-Policy",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains; preload",
+									"name": "Strict-Transport-Security",
+									"description": ""
+								},
+								{
+									"key": "X-Cached",
+									"value": "MISS",
+									"name": "X-Cached",
+									"description": ""
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"name": "X-Content-Type-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"name": "X-Frame-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Rate-Limit-Limit",
+									"value": "100000",
+									"name": "X-Rate-Limit-Limit",
+									"description": ""
+								},
+								{
+									"key": "X-Rate-Limit-Remaining",
+									"value": "99998",
+									"name": "X-Rate-Limit-Remaining",
+									"description": ""
+								},
+								{
+									"key": "X-Rate-Limit-Reset",
+									"value": "2017-06-26T13:17:51.205Z",
+									"name": "X-Rate-Limit-Reset",
+									"description": ""
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "a1e1cbcad9d6188fe18b1578a36c41f3",
+									"name": "X-Request-Id",
+									"description": ""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"name": "X-XSS-Protection",
+									"description": ""
+								},
+								{
+									"key": "x-cache-hit",
+									"value": "false",
+									"name": "x-cache-hit",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"meta\":{\"version\":\"0.21.1\",\"commit\":\"c3b4e2b\",\"container\":\"0f1d5d504d7a\",\"env\":\"staging\",\"copyright\":\"Copyright (c) 2015 - 2017 Watsco. All rights reserved.\",\"authors\":[\"Watsco Conduit Team\"],\"now\":\"2017-06-26T13:17:15.708Z\"},\"links\":{\"self\":\"https://stg-api-cassist-public.ductoid.com/api/product/GSX130181CA/parts_list\",\"docs\":\"https://stg-api-cassist-public.ductoid.com/docs\"},\"data\":{\"model_num\":\"GSX130181CA\",\"model_description\":\"13 SEER AC 1.5 TON\",\"brand\":\"GOODMAN\",\"has_documents\":true,\"parts_list\":[{\"part_num\":\"0121R00005PDG\",\"part_description\":\"BASE PAN 26\\\"\",\"has_supersedes\":false},{\"part_num\":\"0121R00008PDG\",\"part_description\":\"TOP PANEL 26\\\"\",\"item_id\":\"300016\",\"heiler_num\":1371468302259,\"has_supersedes\":true},{\"part_num\":\"0121R00053PDG\",\"part_description\":\"CONTROL COVER\",\"has_supersedes\":false},{\"part_num\":\"0121R00102PDGB\",\"part_description\":\"LOUVERED SIDE PANEL [LT OF CNTL PNL]\",\"has_supersedes\":true},{\"part_num\":\"0121R00109PDGB\",\"part_description\":\"LOUVERED SIDE PANEL\",\"has_supersedes\":true},{\"part_num\":\"0121R00116S\",\"part_description\":\"LOUVERED SIDE PANEL [RT OF CNTL PNL]\",\"has_supersedes\":false},{\"part_num\":\"0121R00326PDG\",\"part_description\":\"PANEL, LOWER ACCESS PNT\",\"has_supersedes\":false},{\"part_num\":\"0131M00060S\",\"part_description\":\"COND MOTOR 1/6 HP, 1 SP, 8 PL\",\"has_supersedes\":true},{\"part_num\":\"0150M00012S\",\"part_description\":\"FAN BLADE- 20\\\" CCW\",\"has_supersedes\":true},{\"part_num\":\"0151R00032\",\"part_description\":\"VALVE, SERVICE 3/4\\\" OPEN LEFT\",\"has_supersedes\":true},{\"part_num\":\"0154M00003\",\"part_description\":\"GASKET, TERM COVER\",\"has_supersedes\":false},{\"part_num\":\"0161R00001P\",\"part_description\":\"CONDUIT\",\"has_supersedes\":false},{\"part_num\":\"0161R00009P\",\"part_description\":\"NAMEPLATE\",\"has_supersedes\":false},{\"part_num\":\"0162R00009\",\"part_description\":\"FILTER DRIER\",\"item_id\":\"229682\",\"heiler_num\":1371468306649,\"has_supersedes\":false},{\"part_num\":\"0163M00006P\",\"part_description\":\"ACORN NUT 5/16 HEX BLACK\",\"has_supersedes\":false},{\"part_num\":\"0164M00022\",\"part_description\":\"GROMMET/WASHER ASSY\",\"has_supersedes\":false},{\"part_num\":\"0201R00268\",\"part_description\":\"COIL TUBING ASSY\",\"has_supersedes\":true},{\"part_num\":\"4400065\",\"part_description\":\"CAPACITOR STRAP\",\"has_supersedes\":false},{\"part_num\":\"5KS150FAB21\",\"part_description\":\"COMPRESSOR 14600, 208/230/60/1\",\"has_supersedes\":true},{\"part_num\":\"A3436601\",\"part_description\":\"NUT-TERM COVER\",\"has_supersedes\":false},{\"part_num\":\"A3436801\",\"part_description\":\"GASKET-NUT\",\"has_supersedes\":false},{\"part_num\":\"B12825171\",\"part_description\":\"3/8\\u001a SERVICE VALVE\",\"has_supersedes\":true},{\"part_num\":\"B1789851\",\"part_description\":\"FLOW CHECK PISTON KIT .051\",\"item_id\":\"257758\",\"heiler_num\":1371468363599,\"has_supersedes\":false},{\"part_num\":\"CAP050350440RSS\",\"part_description\":\"CAPACITOR 5/35/440V [CONTROL BOX]\",\"item_id\":\"4255\",\"heiler_num\":1371468395973,\"has_supersedes\":true},{\"part_num\":\"CONT1P025024VS\",\"part_description\":\"CONTACTOR 25 AMP, 1P, 24V\",\"has_supersedes\":true},{\"part_num\":\"M0221641\",\"part_description\":\"TF SHOULDER SCREW\",\"has_supersedes\":false}]}}"
+						}
+					]
+				},
+				{
+					"name": "Model Search with Serial Number Mask for BK",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}"
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "GM"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/model/search?q=w281313607",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"model",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "w281313607"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Search - Type Ahead",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a7f88448-ae48-44cc-8d37-11d3f8f8db88",
+						"exec": [
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"product_num\"] = responseBody.has(\"111037\");",
+							"tests[\"title\"] = responseBody.has(\"111037 - Heavy Duty\");",
+							"tests[\"heiler_num\"] = responseBody.has(\"-19604\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "GM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/product/typeahead?q=RA14",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"typeahead"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "RA14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BloomReach Direct Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://brm-core-0.brsrvr.com/api/v1/core/?auth_key=&request_type=search&rows=72&start=0&fl=pid%2Ctitle%2Cbrand%2Cprice%2Csale_price%2Cpromotions%2Cthumb_image%2Csku_thumb_images%2Csku_swatch_images%2Csku_color_group%2Curl%2Cprice_range%2Csale_price_range%2Cdescription%2Cis_live%2Cscore%2Cmpn%2Clarge_image&search_type=keyword&account_id=6052&domain_key=bakerdist&url=mobile&request_id=5292995930659&q=n4a7",
+					"protocol": "https",
+					"host": [
+						"brm-core-0",
+						"brsrvr",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"core",
+						""
+					],
+					"query": [
+						{
+							"key": "auth_key",
+							"value": ""
+						},
+						{
+							"key": "request_type",
+							"value": "search"
+						},
+						{
+							"key": "rows",
+							"value": "72"
+						},
+						{
+							"key": "start",
+							"value": "0"
+						},
+						{
+							"key": "fl",
+							"value": "pid%2Ctitle%2Cbrand%2Cprice%2Csale_price%2Cpromotions%2Cthumb_image%2Csku_thumb_images%2Csku_swatch_images%2Csku_color_group%2Curl%2Cprice_range%2Csale_price_range%2Cdescription%2Cis_live%2Cscore%2Cmpn%2Clarge_image"
+						},
+						{
+							"key": "search_type",
+							"value": "keyword"
+						},
+						{
+							"key": "account_id",
+							"value": "6052"
+						},
+						{
+							"key": "domain_key",
+							"value": "bakerdist"
+						},
+						{
+							"key": "url",
+							"value": "mobile"
+						},
+						{
+							"key": "request_id",
+							"value": "5292995930659"
+						},
+						{
+							"key": "q",
+							"value": "n4a7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search EFQ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Looking for heiler_num\"] = responseBody.has(\"1428408500474\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "EC"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/product/search?q=air+conditioners&limit=76&efq=brand:\"Goodman\"",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "air+conditioners"
+						},
+						{
+							"key": "limit",
+							"value": "76"
+						},
+						{
+							"key": "efq",
+							"value": "brand:\"Goodman\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Associated Products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d348050b-67f4-4e37-bccc-755722043de5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "GM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/product/associated?preferred_branch=631&outdoor_product_no=RA1424AJ1NA&indoor_product_no=RH1P2417STANJA&ignore_ac_matches=false",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"associated"
+					],
+					"query": [
+						{
+							"key": "preferred_branch",
+							"value": "631"
+						},
+						{
+							"key": "outdoor_product_no",
+							"value": "RA1424AJ1NA"
+						},
+						{
+							"key": "indoor_product_no",
+							"value": "RH1P2417STANJA"
+						},
+						{
+							"key": "ignore_ac_matches",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search Barcode request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Looking for heiler_num\"] = responseBody.has(\"1428408500474\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "EC"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/product/search?q=EB-STATE3LTP-02&search_type=barcode",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "EB-STATE3LTP-02"
+						},
+						{
+							"key": "search_type",
+							"value": "barcode"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Regular Product Search",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d30b5aac-e2d7-4222-87f8-3ad8c28fb6e9",
+						"exec": [
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Looking for heiler_num\"] = responseBody.has(\"1428408500474\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "BK"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/product/search?q=X121953915&perform_fallback_searches=true",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "X121953915"
+						},
+						{
+							"key": "perform_fallback_searches",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By ID- BK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"product_num\"] = responseBody.has(\"NXA424GKC\");",
+							"tests[\"title\"] = responseBody.has(\"Arcoaire - NXA424GKC - Performance Series 2 Ton\");",
+							"tests[\"brand_name\"] = responseBody.has(\"International Comfort Products\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "BK"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/product/1428408499504",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"1428408499504"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Part Models",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"part_num\"] = responseBody.has(\"1171270\");",
+							"tests[\"part_description\"] = responseBody.has(\"GROMMET COMPRESSOR 1.62\");",
+							"tests[\"item_id\"] = responseBody.has(\"1171270\");",
+							"tests[\"has_supersedes\"] = responseBody.has(\"false\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "BK"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/product/1185705/part_models",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"1185705",
+						"part_models"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search with FallBack",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Looking for heiler_num\"] = responseBody.has(\"1428408500474\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "BK"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/product/search?q=nxa&limit=76&perform_fallback_searches=false",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "nxa"
+						},
+						{
+							"key": "limit",
+							"value": "76"
+						},
+						{
+							"key": "perform_fallback_searches",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Supersedes Typeahead",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"product_num\"] = responseBody.has(\"111037\");",
+							"tests[\"title\"] = responseBody.has(\"111037 - Heavy Duty\");",
+							"tests[\"heiler_num\"] = responseBody.has(\"-19604\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "BK"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/product/supersedes_typeahead?partNumber=111",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"supersedes_typeahead"
+					],
+					"query": [
+						{
+							"key": "partNumber",
+							"value": "111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search With Callouts Response",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "86b5f11d-3afd-48d9-b8f3-990786601bf0",
+						"exec": [
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"product_num\"] = responseBody.has(\"111037\");",
+							"tests[\"title\"] = responseBody.has(\"111037 - Heavy Duty\");",
+							"tests[\"heiler_num\"] = responseBody.has(\"-19604\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "CE"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/product/search?q=RAS-17EKV-UL&limit=76&region_code=4FLA&perform_fallback_searches=true",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "RAS-17EKV-UL"
+						},
+						{
+							"key": "limit",
+							"value": "76"
+						},
+						{
+							"key": "region_code",
+							"value": "4FLA"
+						},
+						{
+							"key": "perform_fallback_searches",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bundle",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "944f9205-db75-41dd-a4a5-e806265e02c8",
+						"exec": [
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Looking for heiler_num\"] = responseBody.has(\"1428408500474\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "GM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/bundle/1464165066154",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"bundle",
+						"1464165066154"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AHRI Typeahead search",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d348050b-67f4-4e37-bccc-755722043de5",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "GM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/product/typeahead?search_type=ahri&q=NXA6&limit=35&region_code=27&branch_id=274&ahri_usage=outdoor",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"typeahead"
+					],
+					"query": [
+						{
+							"key": "search_type",
+							"value": "ahri"
+						},
+						{
+							"key": "q",
+							"value": "NXA6"
+						},
+						{
+							"key": "limit",
+							"value": "35"
+						},
+						{
+							"key": "region_code",
+							"value": "27"
+						},
+						{
+							"key": "branch_id",
+							"value": "274"
+						},
+						{
+							"key": "ahri_usage",
+							"value": "outdoor"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AHRI Product Search",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d348050b-67f4-4e37-bccc-755722043de5",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "GM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/product/search?equipment_type=Straight%20Cool&seer=14.0&q=&ahri_usage=all_outdoor&sort_by=inventory_desc&limit=75&perform_fallback_searches=true&branch_id=165&search_type=ahri&stock_only=true&tonnage=2.0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"search"
+					],
+					"query": [
+						{
+							"key": "equipment_type",
+							"value": "Straight%20Cool"
+						},
+						{
+							"key": "seer",
+							"value": "14.0"
+						},
+						{
+							"key": "q",
+							"value": ""
+						},
+						{
+							"key": "ahri_usage",
+							"value": "all_outdoor"
+						},
+						{
+							"key": "sort_by",
+							"value": "inventory_desc"
+						},
+						{
+							"key": "limit",
+							"value": "75"
+						},
+						{
+							"key": "perform_fallback_searches",
+							"value": "true"
+						},
+						{
+							"key": "branch_id",
+							"value": "165"
+						},
+						{
+							"key": "search_type",
+							"value": "ahri"
+						},
+						{
+							"key": "stock_only",
+							"value": "true"
+						},
+						{
+							"key": "tonnage",
+							"value": "2.0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "09b5fd41-5b35-4808-9a5c-46c9d54d6962",
+		"name": "API-Barcode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Metadata",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3d425ce9-10e7-43ab-bb2a-66bc49d96f5f",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/barcode/metadata",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"barcode",
+						"metadata"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

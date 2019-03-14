@@ -1,0 +1,1078 @@
+{
+	"info": {
+		"_postman_id": "38edabbd-6d02-43f7-badd-2279c97a5b3a",
+		"name": "API-Finance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Update Dealer Plan",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e1765fce-92a8-4125-803f-77c4e4b1f238",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"plan_ids\": [\"39\", \"2\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/finance/dealer/1/update_plan",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"dealer",
+						"1",
+						"update_plan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ygrene Check Eligibility",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// Clear out old token",
+							"postman.clearEnvironmentVariable(\"authToken\");",
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Access Token Returned\"] = responseBody.has(\"session_token\");",
+							"",
+							"// Now set auth token",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"finance_session_token\", jsonData.data.session_token);",
+							"",
+							"postman.setEnvironmentVariable(\"finance_application_id\", jsonData.data.application_id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"application_language\": \"english\",\n    \"loan_amount\": 50000,\n    \"applicant\": {\n        \"first_name\": \"MIMIC\",\n        \"middle_name\": \"F\",\n        \"last_name\": \"APPROVE\",\n        \"email_address\": \"hewasfaafds5@gmail.com\",\n        \"date_of_birth\": \"02/05/1946\",\n        \"phone_num\": \"3083520305\",\n        \"social_security_num\": \"357342943\",\n    \"yearly_income\": 500000,\n        \"address\": {\n            \"address_1\": \"1401 NE Miami Gardens DR APT 995\",\n            \"city\": \"Miami\",\n            \"region\": \"FL\",\n            \"post_code\": \"33179\"\n        }\n    }\n}\n "
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/finance/loan/check-eligibility?provider=ygrene",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"loan",
+						"check-eligibility"
+					],
+					"query": [
+						{
+							"key": "provider",
+							"value": "ygrene"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Application",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "abbe4583-744d-44dc-aac3-66642c3726a8",
+						"exec": [
+							"// Clear out old token",
+							"postman.clearEnvironmentVariable(\"authToken\");",
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Access Token Returned\"] = responseBody.has(\"session_token\");",
+							"",
+							"// Now set auth token",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"finance_session_token\", jsonData.data.session_token);",
+							"",
+							"postman.setEnvironmentVariable(\"finance_application_id\", jsonData.data.application_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"application_language\": \"english\",\n    \"loan_amount\": 7000,\n    \"is_married\": false,\n    \"months_at_current_address\": 25,\n    \"applicant\": {\n        \"first_name\": \"MIMIC\",\n        \"middle_name\": \"C\",\n        \"last_name\": \"APPROVE\",\n        \"email_address\": \"teuiouaoo@mail.com\",\n        \"date_of_birth\": \"04/10/1946\",\n        \"phone_num\": \"3058889081\",\n        \"social_security_num\": \"266263412\",\n        \"mobile_opt_in\": true,\n    \t\"yearly_income\": 100000,\n        \"address\": {\n            \"address_1\": \"428 LONGWOOD RD\",\n            \"city\": \"BOUND BROOK\",\n            \"region\": \"NH\",\n            \"post_code\": \"08805\"\n        }\n    }\n}\n "
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/finance/loan/apply?provider=greensky",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"loan",
+						"apply"
+					],
+					"query": [
+						{
+							"key": "provider",
+							"value": "greensky"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Submit Application",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth-token}}",
+								"disabled": false
+							},
+							{
+								"key": "x-conduit-bu",
+								"value": "bk",
+								"disabled": false
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"application_language\": \"english\",\n    \"loan_amount\": 5000,\n    \"applicant\": {\n        \"first_name\": \"CARMELITA\",\n        \"middle_name\": \"F\",\n        \"last_name\": \"APPROVE\",\n        \"email_address\": \"henryw07@gmail.com\",\n        \"date_of_birth\": \"02/05/1946\",\n        \"phone_num\": \"3083820301\",\n        \"social_security_num\": \"266355863\",\n    \"yearly_income\": 100000,\n        \"address\": {\n            \"address_1\": \"2007 LAMAR AVE\",\n            \"city\": \"GRAND ISLAND\",\n            \"region\": \"NE\",\n            \"post_code\": \"68803-6224\"\n        }\n    }\n}\n "
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/finance/loan/apply?provider=fortiva&plan_num=6060",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"finance",
+								"loan",
+								"apply"
+							],
+							"query": [
+								{
+									"key": "provider",
+									"value": "fortiva"
+								},
+								{
+									"key": "plan_num",
+									"value": "6060"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "526",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 25 Jun 2018 18:50:25 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "100000",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "99999",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"body": "{\"meta\":{\"requestId\":\"3f4f99fd-2022-44a2-8d04-03b3a601240b\",\"version\":\"0.30.5\",\"container\":\"1cd51cba6f93\",\"env\":\"development\",\"copyright\":\"Copyright (c) 2015 - 2018 Watsco. All rights reserved.\",\"authors\":[\"Watsco Conduit Team\"],\"now\":\"2018-06-25T18:50:15.759Z\"},\"links\":{\"self\":\"https://localhost:3000/api/v1/finance/loan/apply?provider=fortiva&plan_num=6060\",\"docs\":\"https://localhost:3000/docs\"},\"errors\":[{\"status\":\"500\",\"title\":\"Internal Server Error - Malformed Error Object\",\"detail\":\"Error: certificate has expired\"}]}"
+				}
+			]
+		},
+		{
+			"name": "Accept Loan Offer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/finance/loan/offer/accept?provider=greensky&application_id={{finance_application_id}}&session_token={{finance_session_token}}&offer_id={{finance_offer_id}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"loan",
+						"offer",
+						"accept"
+					],
+					"query": [
+						{
+							"key": "provider",
+							"value": "greensky"
+						},
+						{
+							"key": "application_id",
+							"value": "{{finance_application_id}}"
+						},
+						{
+							"key": "session_token",
+							"value": "{{finance_session_token}}"
+						},
+						{
+							"key": "offer_id",
+							"value": "{{finance_offer_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recalculate loan offers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/finance/loan/recalculate-offers?provider=greensky&application_id={{finance_application_id}}&session_token={{finance_session_token}}&loan_amount=5000",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"loan",
+						"recalculate-offers"
+					],
+					"query": [
+						{
+							"key": "provider",
+							"value": "greensky"
+						},
+						{
+							"key": "application_id",
+							"value": "{{finance_application_id}}"
+						},
+						{
+							"key": "session_token",
+							"value": "{{finance_session_token}}"
+						},
+						{
+							"key": "loan_amount",
+							"value": "5000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Loan Agreement Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/finance/loan/offer-agreement?provider=greensky&application_id={{finance_application_id}}&session_token={{finance_session_token}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"loan",
+						"offer-agreement"
+					],
+					"query": [
+						{
+							"key": "provider",
+							"value": "greensky"
+						},
+						{
+							"key": "application_id",
+							"value": "{{finance_application_id}}"
+						},
+						{
+							"key": "session_token",
+							"value": "{{finance_session_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Application Status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/v1/finance/loan/status?provider=greensky&application_id=1802112115&session_token={{finance_session_token}}",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"loan",
+						"status"
+					],
+					"query": [
+						{
+							"key": "provider",
+							"value": "greensky"
+						},
+						{
+							"key": "application_id",
+							"value": "1802112115"
+						},
+						{
+							"key": "session_token",
+							"value": "{{finance_session_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Offers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/finance/loan/offer?provider=fortiva&application_id={{finance_application_id}}&session_token={{finance_session_token}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"loan",
+						"offer"
+					],
+					"query": [
+						{
+							"key": "provider",
+							"value": "fortiva"
+						},
+						{
+							"key": "application_id",
+							"value": "{{finance_application_id}}"
+						},
+						{
+							"key": "session_token",
+							"value": "{{finance_session_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Document URL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{finance_session_token}}",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "content-type",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/finance/loan/document-url?client_ip=127.0.0.1&application_id={{finance_application_id}}&provider=greensky&session_token={{finance_session_token}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"loan",
+						"document-url"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "client_ip",
+							"value": "127.0.0.1"
+						},
+						{
+							"key": "application_id",
+							"value": "{{finance_application_id}}"
+						},
+						{
+							"key": "provider",
+							"value": "greensky"
+						},
+						{
+							"key": "session_token",
+							"value": "{{finance_session_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// Clear out old token",
+							"postman.clearEnvironmentVariable(\"authToken\");",
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Access Token Returned\"] = responseBody.has(\"token\");",
+							"",
+							"// Now set auth token",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"auth-token\", jsonData.data.token);",
+							"",
+							"postman.setNextRequest(\"Get all branches\");",
+							"postman.setNextRequest(\"CE Warranty Search\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-conduit-bu",
+						"value": "BK"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/authenticate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Application Decision",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/finance/loan/decision?provider=greensky&application_id={{finance_application_id}}&session_token={{finance_session_token}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"loan",
+						"decision"
+					],
+					"query": [
+						{
+							"key": "provider",
+							"value": "greensky"
+						},
+						{
+							"key": "application_id",
+							"value": "{{finance_application_id}}"
+						},
+						{
+							"key": "session_token",
+							"value": "{{finance_session_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email Account Info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/finance/loan/send-account-info?provider=greensky&application_id={{finance_application_id}}&session_token={{finance_session_token}}&email_to={{finance_customer_email}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"loan",
+						"send-account-info"
+					],
+					"query": [
+						{
+							"key": "provider",
+							"value": "greensky"
+						},
+						{
+							"key": "application_id",
+							"value": "{{finance_application_id}}"
+						},
+						{
+							"key": "session_token",
+							"value": "{{finance_session_token}}"
+						},
+						{
+							"key": "email_to",
+							"value": "{{finance_customer_email}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetApplications",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "page",
+						"value": "4",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/finance/applications?page=0&limit=999999",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"applications"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "999999"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-conduit-bu",
+						"value": "BK"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/finance/user",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Application - Greensky ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// Clear out old token",
+							"postman.clearEnvironmentVariable(\"authToken\");",
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Access Token Returned\"] = responseBody.has(\"session_token\");",
+							"",
+							"// Now set auth token",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"finance_session_token\", jsonData.data.session_token);",
+							"",
+							"postman.setEnvironmentVariable(\"finance_application_id\", jsonData.data.application_id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"application_language\": \"english\",\n    \"loan_amount\": 5476,\n    \"applicant\": {\n        \"first_name\": \"TOD\",\n        \"middle_name\": \"C\",\n        \"last_name\": \"MOORE\",\n        \"email_address\": \"test@gmail.com\",\n        \"date_of_birth\": \"04/10/1946\",\n        \"phone_num\": \"1231231454\",\n        \"social_security_num\": \"666219900\",\n    \"yearly_income\": 100000,\n        \"address\": {\n            \"address_1\": \"428 LONGWOOD RD\",\n            \"city\": \"BOUND BROOK\",\n            \"region\": \"NH\",\n            \"post_code\": \"08805\"\n        }\n    }\n}\n "
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/finance/loan/apply?provider=greensky&plan_num=1162",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finance",
+						"loan",
+						"apply"
+					],
+					"query": [
+						{
+							"key": "provider",
+							"value": "greensky"
+						},
+						{
+							"key": "plan_num",
+							"value": "1162"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b0754b96-63bb-4b43-a13b-bd26f41fd230",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "efe575b3-a0b5-4aa9-b32d-c9d8a9b7de2f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,378 @@
+{
+	"info": {
+		"_postman_id": "db381f6e-dafd-441d-b37f-8bfeb60300c3",
+		"name": "API-DMI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetRORsByStatus",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// Clear out old token",
+							"postman.clearEnvironmentVariable(\"authToken\");",
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Access Token Returned\"] = responseBody.has(\"session_token\");",
+							"",
+							"// Now set auth token",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"finance_session_token\", jsonData.data.session_token);",
+							"",
+							"postman.setEnvironmentVariable(\"finance_application_id\", jsonData.data.application_id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "bk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/dmi/ror/20180711211639452441.ror_api?customer_company_id=customerA&location_id=abc",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"dmi",
+						"ror",
+						"20180711211639452441.ror_api"
+					],
+					"query": [
+						{
+							"key": "customer_company_id",
+							"value": "customerA"
+						},
+						{
+							"key": "location_id",
+							"value": "abc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateRORs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "347d41af-224b-4f7b-86f2-e8f38b6e9197",
+						"exec": [
+							"// Clear out old token",
+							"postman.clearEnvironmentVariable(\"authToken\");",
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Access Token Returned\"] = responseBody.has(\"session_token\");",
+							"",
+							"// Now set auth token",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"finance_session_token\", jsonData.data.session_token);",
+							"",
+							"postman.setEnvironmentVariable(\"finance_application_id\", jsonData.data.application_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "GM"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-cognito-email",
+						"value": "test@email.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"list_id\": \"764\",\n\t\"approved\":\"false\",\n\t\"po_number\": \"124\",\n\t\"suppliers\": [\n\t\t{\n\t\t\t\"supplier_id\": \"GEMAIRE\",\n\t\t\t\"po_number\": \"412\",\n\t\t\t\"special_instructions\": \"Just do it\"\n\t\t},\n\t\t{\n\t\t\t\"supplier_id\": \"BAKER\",\n\t\t\t\"po_number\": \"452\",\n\t\t\t\"special_instructions\": \"Just don't it\"\n\t\t},\n\t\t{\n\t\t\t\"supplier_id\": \"CE\",\n\t\t\t\"po_number\": \"634\",\n\t\t\t\"special_instructions\": \"Just it\"\n\t\t}\t\n\t\t\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/dmi/ror/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"dmi",
+						"ror",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request to Gustavo's DMI Server",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "location_id",
+							"value": "abc",
+							"type": "text"
+						},
+						{
+							"key": "customer_company_id",
+							"value": "customerA",
+							"type": "text"
+						},
+						{
+							"key": "supplier_code",
+							"value": "BK",
+							"type": "text"
+						},
+						{
+							"key": "supplier_ror_id",
+							"value": "sdfdkjfdk",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://dev1.conduitsb.com/dmi-backend/ror/getrorbystatus",
+					"protocol": "https",
+					"host": [
+						"dev1",
+						"conduitsb",
+						"com"
+					],
+					"path": [
+						"dmi-backend",
+						"ror",
+						"getrorbystatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gustavo Get DMI Detail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"customer_company_id\": \"customerA\",\n    \"location_id\": \"abc\",\n    \"supplier_code\":\"GM\",\n    \"supplier_ror_id\":\"20180711211639452441.ror_api\"\n}"
+				},
+				"url": {
+					"raw": "https://dev1.conduitsb.com/dmi-backend/ror/getrordetails",
+					"protocol": "https",
+					"host": [
+						"dev1",
+						"conduitsb",
+						"com"
+					],
+					"path": [
+						"dmi-backend",
+						"ror",
+						"getrordetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateRORs - Dave Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "347d41af-224b-4f7b-86f2-e8f38b6e9197",
+						"exec": [
+							"// Clear out old token",
+							"postman.clearEnvironmentVariable(\"authToken\");",
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Access Token Returned\"] = responseBody.has(\"session_token\");",
+							"",
+							"// Now set auth token",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"finance_session_token\", jsonData.data.session_token);",
+							"",
+							"postman.setEnvironmentVariable(\"finance_application_id\", jsonData.data.application_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "GM"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-cognito-email",
+						"value": "test@email.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \t\"suppliers\" : [\n   {\n     \"supplier_id\" : \"Ecmd\",\n     \"po_num\" : \"PO\"\n   },\n   {\n     \"supplier_id\" : \"Gemaire\",\n     \"po_num\": \"PO2\"\n   }\n ],\n \"requestor_user_email\" : \"dwhiteside@watsco.com\",\n \"list_id\" : 1212,\n \"approved\" : false\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/dmi/ror/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"dmi",
+						"ror",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ROR Items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "GM",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-cognito-email",
+						"value": "test@email.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/dmi/ror/908/1243/items",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"dmi",
+						"ror",
+						"908",
+						"1243",
+						"items"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c57c1b98-3665-4ce7-9cbf-86340fc790bf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "09cc772c-5f16-4cb1-a08c-fef6a4497218",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

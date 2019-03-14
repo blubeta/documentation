@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "822ad1e5-2d3a-45c7-acad-20600dd8efd3",
+		"name": "API-Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Customer Inventory List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0b0b9f88-9717-49ee-bd21-cca98f236b7e",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "GM"
+					},
+					{
+						"key": "x-userid",
+						"value": "12412",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/ecommerce/customer/inventory-list?region_code=1NE&version=2",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ecommerce",
+						"customer",
+						"inventory-list"
+					],
+					"query": [
+						{
+							"key": "region_code",
+							"value": "1NE"
+						},
+						{
+							"key": "version",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Inventory List Item",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0b0b9f88-9717-49ee-bd21-cca98f236b7e",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "GM"
+					},
+					{
+						"key": "x-userid",
+						"value": "12412",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/ecommerce/customer/inventory-list/1219/item/27137?qty_ordered=3&original_qty=3&branch_id=704&branch_inventory_level=0&‌qty_in_stock=1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ecommerce",
+						"customer",
+						"inventory-list",
+						"1219",
+						"item",
+						"27137"
+					],
+					"query": [
+						{
+							"key": "qty_ordered",
+							"value": "3"
+						},
+						{
+							"key": "original_qty",
+							"value": "3"
+						},
+						{
+							"key": "branch_id",
+							"value": "704"
+						},
+						{
+							"key": "branch_inventory_level",
+							"value": "0"
+						},
+						{
+							"key": "‌qty_in_stock",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer Inventory Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0b0b9f88-9717-49ee-bd21-cca98f236b7e",
+						"exec": [
+							"",
+							"// test that we got a valid response",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Data Returned\"] = responseBody.has(\"data\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "GM"
+					},
+					{
+						"key": "x-userid",
+						"value": "12412",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/ecommerce/customer/inventory-request?list_id=420",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ecommerce",
+						"customer",
+						"inventory-request"
+					],
+					"query": [
+						{
+							"key": "list_id",
+							"value": "420"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "68fd08db-507b-4c00-9e23-f10ec7676e60",
+		"name": "API-Customer-Inventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Inventory List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "ce"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/ecom/customer/inventory-list",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ecom",
+						"customer",
+						"inventory-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Inventory Job",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "ce"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"list_id\": 764,\n\t\"job_name\": \"testJob6\",\n\t\"techs\": 5,\n\t\"hours\": 6,\n\t\"job_date\": 1547567986259,\n\t\"job_latitude\": \"25.761681\",\n\t\"job_longitude\": \"-80.191788\",\n\t\"job_address\": \"Miami\"\n}\n"
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/ecom/customer/inventory-job",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ecom",
+						"customer",
+						"inventory-job"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Inventory Job",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "ce"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"list_id\": 61234,\n\t\"job_name\": \"testJobUpdate\",\n\t\"techs\": 5,\n\t\"hours\": 6,\n\t\"job_date\": 1547567986259,\n\t\"job_latitude\": \"25.761681\",\n\t\"job_longitude\": \"-80.191788\",\n\t\"job_address\": \"Miami\"\n}\n"
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/ecom/customer/inventory-job/9",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ecom",
+						"customer",
+						"inventory-job",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Invetory List",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{auth-token}}"
+					},
+					{
+						"key": "x-conduit-bu",
+						"value": "ce"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shipto_bk\": \"test\"\n}\n"
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/ecom/customer/inventory-list/560",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ecom",
+						"customer",
+						"inventory-list",
+						"560"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
