@@ -73,3 +73,6 @@ I'd recommend also reading the whole CONTRIBUTING page in conduit's root directo
 
 - On every micro-service, before you submit a PR, make sure to run `npm test`. If any tests fails, fix them. 
 - I'm not an expert on tests, but you can generally figure out how to update the tests with context clues.
+
+## Auth Code on GM
+- In the app if you go to Product Search (search bar at top of home screen), enter ?951159? and tap search, now if you tap on the menu icon you should see  ‘Debug’ at the bottom, tap that and you’ll see a link to ‘Copy Token’, that will copy to your clipboard and you just need to send it to your laptop.
