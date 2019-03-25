@@ -12,7 +12,8 @@ Conduit uses the git rebase flow for their downstream branches, and uses Pull Re
   - Run `npm test`. All tests must pass, if they don't fix them.
   - IF you update the schema, run `node apidoc.js` in `conduit/node/src` to update the docs, make sure it works.
 - Create Pull Requests on Bitbucket, always into develop.
-- Use the naming scheme: `<module>: <description>`. E.g. `api-contractor-assist: Updates User Info API to contain Prize information and Adds Prize Endpoint`
+- Use the naming scheme: `<module>: <description> <ticket-number>`. E.g. `api-contractor-assist: Update User Info API to contain Prize information and Adds Prize Endpoint ESB-1234`
+- Note that the above PR name uses imperative mood for its commit message - "update user info" as opposted to "updates user info" or "updated user info"
 - I usually leave the Description as whatever the commits were, never a problem.
 - At my time (February 2018-March 209), my reviewer was Henry Williams every time. So that should be htat.
 
